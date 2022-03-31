@@ -32,7 +32,7 @@ def produtos(lis):
 def lin(fra):
     print('=' * (len(fra) + 4))
 
-
+# Esse dicionário contém os produtos
 camisas = [{'Camiseta_Gola_Polo': [79.90, 70]},
            {'Camiseta_regata': [34.90, 30]},
            {'Camiseta_Social': [144.90, 130]},
