@@ -1,7 +1,7 @@
 import json
 import ast
 from funcionalidades import datas, dia_conta, veiculo
-from ex113 import leiaint
+from ler_valores import leiaint
 from interface import mostra, arqui_form, mes_atual
 
 data = datas()
