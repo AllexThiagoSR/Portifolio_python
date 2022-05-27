@@ -1,0 +1,2 @@
+Exercícios do curso de python gratuito do site Curso em Vídeo.
+Feitos por mim.
