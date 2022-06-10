@@ -69,7 +69,10 @@ while True:
     elif op == 4:
         print('Saindo')
         break
+    # Menu se estiver logado
     while logado[0]:
+        print('=' * 50)
+        print(f'Usuário logado atualmente: {users[logado[1]].usuario}')
         print('=' * 50)
         print('Menu de ações')
         print('=' * 50)
@@ -106,7 +109,7 @@ while True:
                 esc = leiaint('Qual o nome do livros que deseja devolver(No.)? ')
                 if esc == 999:
                     break
-                if esc > len(users[logado[1]].livros[esc]):
+                if esc > len(users[logado[1]].livros):
                     print('Não há essa opção.')
                     continue
                 li = users[logado[1]].livros[esc].nome
