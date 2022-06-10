@@ -1,0 +1,18 @@
+Pequeno sistema de uma biblioteca com:
+- Usuários.
+- Opção de logar.
+- Opção de cadastrar um usuário.
+- Opção de adicionar livros ao acervo da biblioteca.
+
+Quando logado em um usuário:
+- Empréstimo de livro.
+- Devolução de livro.
+
+As informações de ... são gurdadas em aequivos txt:
+- Nome, usuário e senha(dos usuário cadastrados).
+- Livros(nome e quantidade) que há acervo da biblioteca.
+- Livros emprestados(Nome de quem pegou o livro, nome do livro e quantidade de livros emprestadas)
+Obs.: Esses arquivos estão com a função de banco de dados, mas apenas com o objetivo de aprendizagem, esse tipo de armazenamento não há segurança,
+então não deve ser levado como base para um banco de dados para uma aplicação real.
+
+Obs.2: O arquivo que roda corretamente é "o_livro_na_mesa_2.py" o arquivo "o_livro_na_mesa.py" é um protótipo.
