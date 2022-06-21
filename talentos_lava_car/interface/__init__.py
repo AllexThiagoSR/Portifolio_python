@@ -127,3 +127,10 @@ def arqui_mes(mes, rel):
         else:
             file.write('Sem relatorio deste mes ate o momento.')
             file.write('\n')
+
+
+def arquivo_principal(lavagem):
+    import json
+    with open('lavagens.txt', 'wt+') as file:
+        lavagem = json.dumps(lavagem, indent=True)
+        file.write(lavagem)

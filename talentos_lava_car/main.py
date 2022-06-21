@@ -1,19 +1,18 @@
-import json
 import ast
 from funcionalidades import datas, dia_conta, veiculo
 from ler_valores import leiaint
-from interface import mostra, arqui_form, mes_atual
+from interface import mostra, arqui_form, mes_atual, arqui_mes, arquivo_principal
 
 data = datas()
+date = data.split()
 conta = []
 veiculos = []
 with open('lavagens.txt', 'rt+') as file:
-    lavagem = ast.literal_eval(file.read())
-
+    lavagens = ast.literal_eval(file.read())
 while True:
     print('=' * 100)
     print('Opções:\n1 - Fechar um dia de trabalho\n2 - Mostrar o relatório\n'
-          '3 - Mostrar relatório mês atual\n4 - Sair(atualizar relatório)')
+          '3 - Mostrar relatório mês atual\n4 - Sair')
     op = leiaint('O que deseja fazer? ')
     if op == 1:
         while True:
@@ -41,15 +40,17 @@ while True:
             if cont in 'Nn':
                 conta = dia_conta(val=conta, veiq=veiculos)
                 conta.insert(0, data)
-                data = data.split()
-                lavagem[data[2]].append(conta[:])
-                arqui_form(lavagem)
+                lavagens[date[2]].append(conta[:])
+                arqui_form(lavagens)
+                arqui_mes(mes=date[2], rel=lavagens)
+                arquivo_principal(lavagens)
                 break
     elif op == 2:
-        mostra(lavagem)
+        mostra(lavagens)
+        arquivo_principal(lavagens)
     elif op == 3:
-        data = data.split()
-        mes_atual(mes=data[2], rel=lavagem)
+        mes_atual(mes=date[2], rel=lavagens)
+        arquivo_principal(lavagens)
         pass
     elif op == 4:
         print('Saindo')
@@ -57,6 +58,4 @@ while True:
     else:
         print('Não há essa opção')
 
-with open('lavagens.txt', 'wt+') as file:
-    lavagem = json.dumps(lavagem, indent=True)
-    file.write(lavagem)
+arquivo_principal(lavagens)

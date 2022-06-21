@@ -3,17 +3,17 @@
  "Fevereiro": [],
  "Marco": [],
  "Abril": [],
- "Maio": [
+ "Maio": [],
+ "Junho": [
   [
-   "16 de Maio de 2022 - Segunda",
+   "20 de Junho de 2022 - Segunda",
    [
-    "Moto;2",
-    "Carro;5"
+    "Carro;7",
+    "Moto;3"
    ],
-   260.0
+   360.0
   ]
  ],
- "Junho": [],
  "Julho": [],
  "Agosto": [],
  "Setembro": [],
